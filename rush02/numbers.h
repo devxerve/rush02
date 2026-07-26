@@ -15,7 +15,7 @@ int			ft_strcmp(char *s1, char *s2);
 
 int			ft_len(char *str);
 
-void		*ft_solve_number(char *num_str, t_dict *dict, int total_elements);
+char		**ft_solve_number(char *num_str, int total_elements);
 
 void		ft_process_number(char *block, int scale, t_dict dict,
 				int total_elements);
