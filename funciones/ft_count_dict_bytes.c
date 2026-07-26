@@ -1,30 +1,26 @@
 #include <fcntl.h>
 #include <unistd.h>
-#include <stdlib.h>
 
-int count_dict_bytes(void)
+int	ft_count_dict_bytes(void)
 {
-	int fd;
-	ssize_t bytes_read;
-	char *buffer;
-	size_t buffer_size;
+	int		fd;
+	ssize_t	bytes_read;
+	char	buffer[4096];
+	int		total_bytes;
 
-	buffer_size = 4096;
-	buffer = (char *)malloc(buffer_size);
-	if (!buffer)
-		return (1);
-
+	total_bytes = 0;
 	fd = open("numbers.dict", O_RDONLY);
 	if (fd == -1)
 	{
-		write (2, "error al abrir el archivo\n", 26);
-		free(buffer);
-		return (1);
+		write(2, "error al abrir el archivo\n", 26);
+		return (-1);
 	}
-	bytes_read = read(fd, buffer, buffer_size);
+	bytes_read = read(fd, buffer, sizeof(buffer));
 	while (bytes_read > 0)
-        bytes_read = read(fd, buffer, buffer_size);
-    free(buffer)
-    close(fd);
-    return (0);
+	{
+		total_bytes += bytes_read;
+		bytes_read = read(fd, buffer, sizeof(buffer));
+	}
+	close(fd);
+	return (total_bytes);
 }
