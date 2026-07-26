@@ -1,9 +1,9 @@
 #ifndef NUMBERS_H
-#define NUMBERS_H
+# define NUMBERS_H
 
-#include <fcntl.h>
-#include <stdlib.h>
-#include <unistd.h>
+# include <fcntl.h>
+# include <stdlib.h>
+# include <unistd.h>
 
 typedef struct s_dict
 {
@@ -11,10 +11,21 @@ typedef struct s_dict
 	char	*value;
 }			t_dict;
 
+int	ft_strcmp(char *s1, char *s2)
+{
+	int	i;
+
+	i = 0;
+	while ((s1[i] != '\0') && (s1[i] == s2[i]))
+	{
+		i++;
+	}
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+}
+
 void		*ft_solve_number(char *num_str, t_dict *dict, int total_elements);
 
-void		ft_process_number(char *block, int scale, t_dict dict,
-				int total_elements);
+void		ft_process_number(char *block, int scle, t_dict dict, int elements);
 
 void		ft_print_scale(int scale, t_dict *dict, int total_elements);
 
@@ -24,9 +35,9 @@ void		ft_control_spaces(int reset);
 
 void		ft_free_memory(t_dict *dict, int total_elements);
 
-int	ft_validate_number(char *str); // TODO: Definir la funcion aqui
+int			ft_validate_number(char *str);
 
-size_t	ft_count_dict_bytes(char *dict_path); // TODO: Definir la funcion aqui
+size_t		ft_count_dict_bytes(char *dict_path);
 
 char		*ft_store_dict(char *dict_path, size_t size);
 // TODO: Definir aqui la funcion
