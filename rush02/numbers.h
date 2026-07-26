@@ -19,7 +19,7 @@ char		*ft_strcat(char *dest, char *src);
 
 void		*ft_solve_number(char *num_str, t_dict *dict, int total_elements);
 
-void		ft_parse_dict(s_dict *t_dict, char* dict_name);
+int		ft_parse_dict(s_dict *t_dict, char* dict_name);
 
 void		ft_process_number(char *block, int scle, t_dict dict, int elements);
 
