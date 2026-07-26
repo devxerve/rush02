@@ -9,7 +9,7 @@ int	ft_count_dict_bytes(void)
 	int		total_bytes;
 
 	total_bytes = 0;
-	fd = open("numbers.dict", O_RDONLY);
+	fd = open(dict_path, O_RDONLY);
 	if (fd == -1)
 	{
 		write(2, "error al abrir el archivo\n", 26);
