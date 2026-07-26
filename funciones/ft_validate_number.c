@@ -1,4 +1,4 @@
-int	ft_validate_numbers(char *str)
+int	ft_validate_number(char *str)
 {
 	while (str)
 	{
