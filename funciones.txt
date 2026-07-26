@@ -17,6 +17,3 @@
 
 * free_memory: Aplica free a cada clave, cada palabra y finalmente al array de estructuras completo para evitar fugas.
 
-
-
-
