@@ -1,7 +1,7 @@
 # Plan de funciones
 ![Plan de funciones](rush_functions.png)
 
-### 'numbers.h'
+### numbers.h
 ```c
 #ifndef NUMBERS_H
 #define NUMBERS_H
