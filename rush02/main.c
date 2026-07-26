@@ -6,41 +6,43 @@
 /*   By: jcervera <jcervera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/26 16:31:50 by jcervera          #+#    #+#             */
-/*   Updated: 2026/07/26 16:33:25 by jcervera         ###   ########.fr       */
+/*   Updated: 2026/07/26 17:03:54 by jcervera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <fcntl.h>
-#include <unistd.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 typedef struct s_dict
 {
 	char	*key;
 	char	*value;
-}	t_dict;
+}			t_dict;
 
-void	*ft_solve_number(char *num_str, t_dict *dict, int total_elements);
+void		*ft_solve_number(char *num_str, t_dict *dict, int total_elements);
 
-void	ft_process_number(char *block, int scale, t_dict dict, int total_elements);
+void		ft_process_number(char *block, int scale, t_dict dict,
+				int total_elements);
 
-void	ft_print_scale(int scale, t_dict *dict, int total_elements);
+void		ft_print_scale(int scale, t_dict *dict, int total_elements);
 
-char	*ft_search_dict(t_dict *dict,int total_elements, char *key);
+char		*ft_search_dict(t_dict *dict, int total_elements, char *key);
 
-void	ft_control_spaces(int reset);
+void		ft_control_spaces(int reset);
 
-void	ft_free_memory(t_dict *dict, int total_elements);
+void		ft_free_memory(t_dict *dict, int total_elements);
 
-int	ft_validate_number(char *str); //TODO: Definir la funcion aqui
+int	ft_validate_number(char *str); // TODO: Definir la funcion aqui
 
-size_t 	ft_count_dict_bytes(char *dict_path); //TODO: Definir la funcion aqui
+size_t	ft_count_dict_bytes(char *dict_path); // TODO: Definir la funcion aqui
 
-char *ft_store_dict(char *dict_path, size_t size); //TODO: Definir aqui la funcion
+char		*ft_store_dict(char *dict_path, size_t size);
+// TODO: Definir aqui la funcion
 
-t_dict *ft_parse_dict(char *raw_buffer, int *total_elements); //TODO: Definir aqui la funcion
+t_dict		*ft_parse_dict(char *raw_buffer, int *total_elements);
+// TODO: Definir aqui la funcion
 
 int	main(int argc, int argv)
 {
-	
 }
