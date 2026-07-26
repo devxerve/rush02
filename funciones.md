@@ -1,8 +1,8 @@
 ## Fase 1: Preparación (Validar y Cargar)
 
 **HECHO** validate_number: Revisa que el string del usuario tenga solo dígitos (0-9); si falla, aborta.
-* count_dict_bytes: Abre el archivo, lo lee entero para contar sus bytes totales y lo cierra.
-* store_dict: Hace malloc con el tamaño anterior, reabre el archivo, vuelca todo el texto en memoria y lo cierra.
+* **HECHO** count_dict_bytes: Abre el archivo, lo lee entero para contar sus bytes totales y lo cierra.
+* **HECHO** store_dict: Hace malloc con el tamaño anterior, reabre el archivo, vuelca todo el texto en memoria y lo cierra.
 * parse_dict: Trocea el texto bruto (: y \n) y rellena un array de t_dict con pares clave/valor limpios.
 
 ## Fase 2: Lógica (El Motor Numérico)
