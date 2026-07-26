@@ -11,6 +11,10 @@ typedef struct s_dict
 	char	*value;
 }			t_dict;
 
+int			ft_strcmp(char *s1, char *s2);
+
+int			ft_len(char *str);
+
 void		*ft_solve_number(char *num_str, t_dict *dict, int total_elements);
 
 void		ft_process_number(char *block, int scale, t_dict dict,
