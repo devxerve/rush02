@@ -1,10 +1,10 @@
 #include <fcntl.h>
 #include <unistd.h>
 
-int	ft_count_dict_bytes(void)
+size_t	ft_count_dict_bytes(void)
 {
 	int		fd;
-	ssize_t	bytes_read;
+	size_t	bytes_read;
 	char	buffer[4096];
 	int		total_bytes;
 
