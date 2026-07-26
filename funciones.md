@@ -1,0 +1,22 @@
+## Fase 1: Preparación (Validar y Cargar)
+
+**HECHO** validate_number: Revisa que el string del usuario tenga solo dígitos (0-9); si falla, aborta.
+* count_dict_bytes: Abre el archivo, lo lee entero para contar sus bytes totales y lo cierra.
+* store_dict: Hace malloc con el tamaño anterior, reabre el archivo, vuelca todo el texto en memoria y lo cierra.
+* parse_dict: Trocea el texto bruto (: y \n) y rellena un array de t_dict con pares clave/valor limpios.
+
+## Fase 2: Lógica (El Motor Numérico)
+
+* solve_number: Mide el string del número y lo divide en bloques de 3 dígitos según su escala (miles, millones).
+* process_number: Procesa un bloque de 3 dígitos imprimiendo su centena, decena y unidad individual.
+* print_scale: Imprime el nombre de la escala ("thousand", "million") justo después de un bloque que no sea cero.
+* search_dict: Recorre el array de estructuras buscando la clave y devuelve la palabra coincidente.
+* control_spaces: Imprime un espacio en blanco entre palabras, evitando que queden espacios sueltos al inicio o al final.
+
+## Fase 3: Limpieza
+
+* free_memory: Aplica free a cada clave, cada palabra y finalmente al array de estructuras completo para evitar fugas.
+
+
+
+
