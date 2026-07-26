@@ -18,7 +18,7 @@ char	*ft_search_dict(t_dict *dict, int total_elements, char *key)
 					write(1, "ERROR: INVALID DICTIONARY\n",
 						sizeof("ERROR: INVALID DICTIONARY\n"));
 					return (NULL);
-				}	
+				}
 			}
 			return (dict[i].value);
 		}
