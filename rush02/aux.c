@@ -19,3 +19,23 @@ int	ft_len(char *str)
 		i++;
 	return (i);
 }
+
+char	*ft_strcat(char *dest, char *src)
+{
+	int	length;
+	int	i;
+
+	length = 0;
+	while (dest[length] != '\0')
+	{
+		length++;
+	}
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dest[i + length] = src[i];
+		i++;
+	}
+	dest[i + length] = '\0';
+	return (dest);
+}
