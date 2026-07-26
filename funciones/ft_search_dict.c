@@ -10,13 +10,15 @@ char	*ft_search_dict(t_dict *dict, int total_elements, char *key)
 	{
 		if (ft_strcmp(dict[i].key, key) == 0)
 		{
-			j = i;
+			j = i + 1;
 			while (j < total_elements)
 			{
 				if (ft_strcmp(dict[j].key, key) == 0)
+				{
 					write(1, "ERROR: INVALID DICTIONARY\n",
 						sizeof("ERROR: INVALID DICTIONARY\n"));
-				return (NULL);
+					return (NULL);
+				}	
 			}
 			return (dict[i].value);
 		}
